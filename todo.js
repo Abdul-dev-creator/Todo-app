@@ -50,6 +50,7 @@ function createTask() {
     // Return focus to input
     taskInput.focus();
 }
+
 taskInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
         createTask();
