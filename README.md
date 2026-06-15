@@ -9,6 +9,7 @@ A simple todo list app built with HTML, CSS, and JavaScript.
 - Empty task validation
 - Styled task cards
 - Separate Complete and Delete buttons
+- Delete task
 
 ## Project Files
 
