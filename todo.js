@@ -12,9 +12,31 @@ addBtn.addEventListener("click", () => {
   }
 
   const li = document.createElement("li");
-  li.textContent = task;
+  
+  const span = document.createElement("span");
+  span.textContent = task;
+  
+  span.addEventListener("click", () => {
+    span.classList.toggle("completed");
+  });
+  
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.classList.add("delete-btn");
+  
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+  });
 
+  li.appendChild(span);
+  li.appendChild(deleteBtn);
   taskList.appendChild(li);
 
   taskInput.value = "";
+});
+
+taskInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    addBtn.click();
+  }
 });
